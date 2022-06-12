@@ -3,19 +3,17 @@
 78 -> третьей цифры нет
 32679 -> 6 */
 
-int SizeNumber(int num)
+int ReductionNumber(int num)
 {
-    int dozens = 1;
-    while (num > 0)
+    while (num > 1000)
     {
-        num /= 10;
-        dozens *= 10; 
+        num /= 10; 
     }
-  return dozens;
+  return num;
 }
 int thirdDigit(int dig)
 {
-    int thirdD = (dig / (SizeNumber(dig) / 1000)) % 10;
+    int thirdD = ReductionNumber(dig) % 10;
     return thirdD;
 }
 Console.Clear();
