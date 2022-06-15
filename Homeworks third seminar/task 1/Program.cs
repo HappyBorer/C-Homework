@@ -8,7 +8,7 @@ using static System.Console;
 Clear();
 Write("Введите пятизначное число: ");
 int number = Convert.ToInt32(ReadLine());
-if (number < 10000 && number > 99999)
+if (number < 10000 || number > 99999)
 {
     WriteLine("Ошибка! Чиcло не пятизначное!");
     return;
