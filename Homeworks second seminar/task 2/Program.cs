@@ -5,7 +5,7 @@
 
 int ReductionNumber(int num)
 {
-    while (num > 1000)
+    while (num > 999)
     {
         num /= 10; 
     }
