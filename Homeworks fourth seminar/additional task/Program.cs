@@ -13,8 +13,7 @@ void Conversion(double[] account, int choice, int check)
     ReadKey();
 }
 double[] checkYour = { 3750.65, 300.85, 1500.34, 2190.57 };
-bool flag = true;
-while (flag == true)
+while (true)
 {
     Clear();
     WriteLine($"Вашы счета:\nРублёвый \t{checkYour[0]}\nДолларовый \t{checkYour[1]}\nЕвровый \t{checkYour[2]}\nЮаневый \t{checkYour[3]}");
@@ -32,8 +31,7 @@ while (flag == true)
         string answer = ReadLine();
         if (answer.ToLower() == "y")
         {
-            flag = false;
-            break;
+            return;
         }
         else
         {
