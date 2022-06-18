@@ -21,7 +21,7 @@ int firstNumber = Invite("Введите первое число: ");
 
 int secondNumber = Invite("Введите второе число: ");
 
-if ( Square(firstNumber) == secondNumber || Square(secondNumber) == firstNumber)
+if (Square(firstNumber) == secondNumber || Square(secondNumber) == firstNumber)
 {
     Console.WriteLine("Да");
 }

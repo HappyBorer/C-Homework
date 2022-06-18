@@ -16,7 +16,7 @@ if (number < 10000 || number > 99999)
 int NumberFlip(int num)
 {
     string figure = " ";
-    while(num > 0)
+    while (num > 0)
     {
         int result = num % 10;
         figure += Convert.ToString(result);

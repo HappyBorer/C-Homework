@@ -4,7 +4,7 @@
 
 using static System.Console;
 Clear();
-int Input (string figure)
+int Input(string figure)
 {
     Write(figure);
     return Convert.ToInt32(ReadLine());
@@ -19,7 +19,7 @@ int PowMy(int num, int i)
     {
         return result;
     }
-    while(i > 0)
+    while (i > 0)
     {
         result *= num;
         i--;
@@ -29,7 +29,7 @@ int PowMy(int num, int i)
 
 int count = 1;
 
-while(count < numberN)
+while (count < numberN)
 {
     Write($"{PowMy(count, 3)}, ");
     count++;

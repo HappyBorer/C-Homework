@@ -6,10 +6,10 @@
 
 void weekFeed(int day)
 {
-    if ( day == 6 || day == 7)
+    if (day == 6 || day == 7)
     {
         Console.WriteLine("Да");
-    }   
+    }
     else if (0 < day && day < 6)
     {
         Console.WriteLine("Нет");

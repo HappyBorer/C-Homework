@@ -5,8 +5,8 @@
 Console.Clear();
 void NumberCompar(int numGue, int tr)
 {
-    while(tr > 0)
-    {   
+    while (tr > 0)
+    {
         Console.Write($"Осталось попыток {tr}: ");
         int number = Convert.ToInt32(Console.ReadLine());
         if (number > numGue)
@@ -17,17 +17,17 @@ void NumberCompar(int numGue, int tr)
         {
             Console.WriteLine("Неправильно. Угадываемое число больше!");
         }
-        else 
+        else
         {
             Console.WriteLine("Ты угадал!!!");
             break;
-        }   
+        }
         tr--;
         if (tr == 0)
         {
             Console.WriteLine("Попытки кончились.");
         }
-}
+    }
 }
 int numberGuess = new Random().Next(1, 1000);
 Console.WriteLine("Угадай число от 1 до 1000");

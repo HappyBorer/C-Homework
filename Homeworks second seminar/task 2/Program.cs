@@ -7,9 +7,9 @@ int ReductionNumber(int num)
 {
     while (num > 999)
     {
-        num /= 10; 
+        num /= 10;
     }
-  return num;
+    return num;
 }
 int thirdDigit(int dig)
 {
@@ -19,11 +19,11 @@ int thirdDigit(int dig)
 Console.Clear();
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-if(number < 100)
+if (number < 100)
 {
     Console.WriteLine("Третьей цифры нет!");
 }
 else
-{ 
+{
     Console.WriteLine(thirdDigit(number));
 }

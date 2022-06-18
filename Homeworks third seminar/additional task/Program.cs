@@ -44,14 +44,14 @@ void Menu(string line)
     {
         WriteName();
     }
-    else 
+    else
     {
         WriteLine("Такая команда отсутствует! Введите команду из списка!");
     }
 }
 
 string line = "Добро пожаловать";
-while(true)
+while (true)
 {
     Help();
     Write("Выберите команду: ");
@@ -61,7 +61,7 @@ while(true)
     {
         Write("Вы хотите выйти? Y(Да), N(Нет): ");
         line = ReadLine();
-        if(line == "Y")
+        if (line == "Y")
         {
             return;
         }

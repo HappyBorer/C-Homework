@@ -3,7 +3,7 @@
 
 Console.Write("Ввод: ");
 string line = Console.ReadLine();
-while(line != "exit")
+while (line != "exit")
 {
     Console.Write("Ввод: ");
     line = Console.ReadLine();
