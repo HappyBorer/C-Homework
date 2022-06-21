@@ -8,7 +8,7 @@ void PrintArray(int[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
-        if (i != arr.Length - 1)
+        if(i != arr.Length - 1)
         {
             Console.Write($"{arr[i]}, ");
         }
