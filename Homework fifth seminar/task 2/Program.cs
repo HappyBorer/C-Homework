@@ -3,6 +3,8 @@
 [3, 7, 23, 12] -> 19
 [-4, -6, 89, 6] -> 0*/
 
+
+Console.Clear();
 int size = 10;
 
 int[] arrayInt = new int[size];
@@ -16,9 +18,25 @@ int[] FillArrayRandom(int[] arr)
     return arr;
 }
 
+void PrintArray(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if(i != arr.Length - 1)
+        {
+            Console.Write($"{arr[i]}, ");
+        }
+        else
+        {
+            Console.Write(arr[i] + ".");
+        }
+    }
+    Console.WriteLine();
+}
+
 arrayInt = FillArrayRandom(arrayInt);
 
-void SumOddElementsArray(int[] arr)
+void SumOddIndexArray(int[] arr)
 {
     int sum = 0;
     for (int i = 1; i < arr.Length; i += 2 )
@@ -27,4 +45,5 @@ void SumOddElementsArray(int[] arr)
     }
     Console.WriteLine($"Сумма элементов стоящих  на нечётных позициях = {sum}");
 }
-SumOddElementsArray(arrayInt);
+PrintArray(arrayInt);
+SumOddIndexArray(arrayInt);
