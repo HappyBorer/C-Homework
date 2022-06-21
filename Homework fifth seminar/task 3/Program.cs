@@ -7,7 +7,7 @@ void PrintArray(double[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
-        if(i != arr.Length - 1)
+        if (i != arr.Length - 1)
         {
             Console.Write($"{arr[i]}, ");
         }
@@ -45,7 +45,7 @@ void FindDiffMaxMinElement(double[] arr)
         {
             max = arr[i];
         }
-        if(min > arr[i])
+        if (min > arr[i])
         {
             min = arr[i];
         }
