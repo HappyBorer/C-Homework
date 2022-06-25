@@ -6,7 +6,7 @@
 using static System.Console;
 Clear();
 
-Write("Введите числа через зяпятую: ");
+Write("Введите числа через запятую: ");
 string inputNumbers = $"{ReadLine()} ";
 
 
