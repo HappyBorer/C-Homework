@@ -21,11 +21,13 @@ double k2 = InputDouble("Введите k2: ");
 if (k1 == k2)
 {
     WriteLine("Прямые паралельны или совпадают");
-    return;
 }
-double x = (b1 - b2) / (k2 - k1);
-double y = k1 * x + b1;
-WriteLine($"Координаты точки пересечения двух прямых ({x};{y})");
+else
+{
+    double x = (b1 - b2) / (k2 - k1);
+    double y = k1 * x + b1;
+    WriteLine($"Координаты точки пересечения двух прямых ({x};{y})");
+}
 
 
 
