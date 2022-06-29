@@ -26,7 +26,7 @@ void FillArrayRealNambers(double[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = Convert.ToDouble(new Random().Next(-100, 100)) / 10; 
+            array[i, j] = Math.Round(Convert.ToDouble(new Random().Next(-100, 100)) / new Random().Next(1, 11), 1); 
         }
     }
 }
@@ -39,7 +39,8 @@ void PrintArrayReal(double[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Write($"{array[i, j]} "); 
+            // Write("{0:0.00} ", array[i, j]);
+            Write($"{array[i, j]} ");
         }
         WriteLine();
     }
