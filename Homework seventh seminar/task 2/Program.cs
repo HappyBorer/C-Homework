@@ -15,9 +15,10 @@ int InputNumber(string output)
     Write(output);
     return Convert.ToInt32(ReadLine());
 }
-int rowNumber = InputNumber("Введите номер строки элемента: ");
-int columnNumber = InputNumber("Введите номер столбца элемента: ");
 
+int ItemPositionAcquisition =  InputNumber("Введите координаты элемента: ");
+int rowNumber = ItemPositionAcquisition / 10;
+int columnNumber = ItemPositionAcquisition % 10;
 
 void PlenumArrayNambers(int[,] massif)
 {
@@ -30,8 +31,8 @@ void PlenumArrayNambers(int[,] massif)
     }
 }
 
-int row = 8;
-int column = 6; 
+int row = 9;
+int column = 9; 
 
 int[,] arrayInt = new int[row, column];
 PlenumArrayNambers(arrayInt);
@@ -53,7 +54,7 @@ PrintArray(arrayInt);
 
 WriteLine();
 
-if (rowNumber > arrayInt.GetLength(0) - 1 || columnNumber > arrayInt.GetLength(1) - 1)
+if (rowNumber > arrayInt.GetLength(0) - 1 || columnNumber > arrayInt.GetLength(1) - 1 || rowNumber > 9)
 {
     WriteLine("Такого элемента в массиве нет!");
 }
