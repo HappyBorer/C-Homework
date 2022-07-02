@@ -37,38 +37,39 @@ void PrintArray(int[,] array)
     WriteLine();
 }
 
-double ElementProduct(int[,] massif)
+int[,] ElementProduct(int[,] massif, int[,] array)
 {
+    int[,] matrixProduct = new int[massif.GetLength(0), array.GetLength(1)];
     double workElement = 1;
     for (int i = 0; i < massif.GetLength(0); i++)
     {
         for (int j = 0; j < massif.GetLength(1); j++)
         {
-            workElement *= massif[i, j];
+            for (int k = 0; k < array.GetLength(1); k++)
+            {
+                matrixProduct[i, j] += massif[i, k] * array[k, j];
+                
+            }
         }
     }
-    return workElement;
+    return matrixProduct;
 }
 // Начало кода
 
-int sizeRowFirst = InputNumber("Введите количество строк первой матрицы: ");
-int sizeColumnFirst = InputNumber("Введите количество столбцов первой матрицы: ");
-int sizeRowSecond = InputNumber("Введите количество строк второй матрицы: ");
-int sizeColumnSecond = InputNumber("Введите количество столбцов второй матрицы: ");
-int[,] arrayInt = new int[sizeRowFirst, sizeColumnFirst];
-int[,] arrayNumbers = new int[sizeRowSecond, sizeColumnSecond];
+int sizeRowColumn = InputNumber("Введите размер матриц: ");
+int[,] arrayInt = new int[sizeRowColumn, sizeRowColumn];
+int[,] arrayNumbers = new int[sizeRowColumn, sizeRowColumn];
 
 FillArrayNambers(arrayInt);
 
 FillArrayNambers(arrayNumbers);
-
+WriteLine("Первая матрица:");
 PrintArray(arrayInt);
-
+WriteLine("Вторая матрица:");
 PrintArray(arrayNumbers);
-
-double matrixProduct = ElementProduct(arrayInt) * ElementProduct(arrayNumbers);
-
-WriteLine("Произведение двух матриц = {0}", matrixProduct);
+int[,] matrixProduct = ElementProduct(arrayInt, arrayNumbers);
+WriteLine("Результат произведения матриц:");
+PrintArray(matrixProduct);
 
 
 
