@@ -40,7 +40,6 @@ void PrintArray(int[,] array)
 int[,] ElementProduct(int[,] massif, int[,] array)
 {
     int[,] matrixProduct = new int[massif.GetLength(0), array.GetLength(1)];
-    double workElement = 1;
     for (int i = 0; i < massif.GetLength(0); i++)
     {
         for (int j = 0; j < massif.GetLength(1); j++)
