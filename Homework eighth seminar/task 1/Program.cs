@@ -29,6 +29,33 @@ void PrintArray(int[,] array)
     WriteLine();
 }
 
+int[,] FullSordedArray(int[,] massif)
+{
+    for (int k = 0; k < massif.GetLength(0); k++)
+    {
+        for (int l = 0; l < massif.GetLength(1); l++)
+        {
+            int temp = massif[k, l];
+            int maxI = k;
+            int maxJ = l;
+            for (int i = k; i < massif.GetLength(0); i++)
+            {
+                for (int j = l; j < massif.GetLength(1); j++)
+                {
+                    if (massif[maxI, maxJ] < massif[i, j])
+                    {
+                        maxI = i;
+                        maxJ = j;
+                    }
+                }
+            }
+            massif[k, l] = massif[maxI, maxJ];
+            massif[maxI, maxJ] = temp;
+        }
+    }
+    return massif;
+}
+
 int[,] SortArrayByRows(int[,] massif)
 {
     for (int k = 0; k < massif.GetLength(0); k++)
@@ -46,7 +73,7 @@ int[,] SortArrayByRows(int[,] massif)
             }
         }
     }
-    return massif; 
+    return massif;
 }
 
 
@@ -61,10 +88,15 @@ PlenumArrayNambers(arrayNumbers);
 
 WriteLine("Массив до сортировки");
 PrintArray(arrayNumbers);
+// Думал так надо...
 
-arrayNumbers = SortArrayByRows(arrayNumbers);
+// arrayNumbers = FullSordedArray(arrayNumbers);
 
-WriteLine("Массив  сортировки");
+// А по условию вроде так...?
+arrayNumbers = SortArrayByRows(arrayNumbers); 
+
+
+WriteLine("Массив после сортировки");
 PrintArray(arrayNumbers);
 
 
