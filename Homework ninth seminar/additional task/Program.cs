@@ -16,8 +16,8 @@ Clear();
 
 // Мой код
 ConsoleKeyInfo key;
-int sizeRows = 19;
-int sizeColumns = 10;
+int height = 19;
+int width = 10;
 char person = '@';
 int positionPersonX = 9;
 int positionPersonY = 5;
@@ -30,11 +30,11 @@ Write(person);
 while (true)
 {
     Console.CursorVisible = false;
-    for (int i = 0; i < sizeRows; i++)
+    for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < sizeColumns; j++)
+        for (int j = 0; j < width; j++)
         {
-            if (i == 0 || i == sizeRows - 1 || j == 0 || j == sizeColumns - 1)
+            if (i == 0 || i == height - 1 || j == 0 || j == width - 1)
             {
                 Console.SetCursorPosition(i, j);
                 Write('*');
@@ -55,7 +55,7 @@ while (true)
         positionPersonY--;
         Console.SetCursorPosition(positionPersonX, positionPersonY);
     }
-    else if (key.Key == ConsoleKey.DownArrow && positionPersonY < sizeColumns - 2)
+    else if (key.Key == ConsoleKey.DownArrow && positionPersonY < width - 2)
     {
         Write(' ');
         positionPersonY++;
@@ -67,7 +67,7 @@ while (true)
         positionPersonX--;
         Console.SetCursorPosition(positionPersonX, positionPersonY);
     }
-    else if (key.Key == ConsoleKey.RightArrow && positionPersonX < sizeRows - 2)
+    else if (key.Key == ConsoleKey.RightArrow && positionPersonX < height - 2)
     {
         Write(' ');
         positionPersonX++;
